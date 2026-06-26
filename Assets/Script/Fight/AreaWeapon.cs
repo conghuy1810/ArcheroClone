@@ -11,11 +11,11 @@ namespace TestTask.Fight
         [SerializeField] float time;
         private void Start()
         {
-            rb.velocity = transform.forward * force;
+            rb.linearVelocity = transform.forward * force;
         }
         public override void ResetRigidBody()
         {
-            rb.velocity = Vector3.zero;
+            rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
         public override void OnCollision(Attributes attribute)

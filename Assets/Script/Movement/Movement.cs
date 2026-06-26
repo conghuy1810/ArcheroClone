@@ -60,6 +60,9 @@ namespace TestTask.Movement
             }
             for (int i = 0; i < num; i++)
             {
+                if (overlaps[i].gameObject.name.Contains("Ground"))
+                    continue; // Bỏ qua mặt đất để không bị kẹt di chuyển
+
                 Transform t = overlaps[i].transform;
                 if (Physics.ComputePenetration(myCollider, transform.localPosition, transform.rotation, overlaps[i], t.position, t.rotation, out Vector3 dir, out float dist))
                 {

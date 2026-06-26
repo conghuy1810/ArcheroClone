@@ -20,6 +20,16 @@ namespace TestTask.Attribute
         public virtual void Awake() {
             hp = mhp;
         }
+        public void SetMaxHP(float newMaxHp)
+        {
+            mhp = newMaxHp;
+            hp = mhp; // Đầy máu khi khởi tạo
+            if (healthBar != null)
+            {
+                healthBar.UpdateHealthBar(hp, mhp);
+            }
+        }
+        public float MaxHP => mhp;
         public void TakeDamage(int damage)
         {         
             hp -= damage;        

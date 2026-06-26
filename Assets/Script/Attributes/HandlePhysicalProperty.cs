@@ -11,7 +11,7 @@ public class HandlePhysicalProperty : ScriptableObject
         switch (e)
         {
             case PlayerSkill.SkillType.IncreaseSpeed:
-                playerInformation.speed = 0.75f;
+                playerInformation.speed += 0.75f; // Tăng thêm 0.75 tốc độ chạy thay vì gán cứng bằng 0.75f khiến chạy chậm đi
                 break;
             case PlayerSkill.SkillType.AttackRate:
                 attack.ChangeTimeBetweenAttack(0.05f);

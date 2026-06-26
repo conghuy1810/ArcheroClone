@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinRequired: 100
   damage: 4
-  AfterEffectOnHit: {fileID: 655842147547984728, guid: 77b6139f3b5de2c468af2262a7585d85, type: 3}
+  AfterEffectOnHit: {fileID: 3931957379319879057, guid: 49f5f9d35e12b5c41ab683ab2e91c053, type: 3}

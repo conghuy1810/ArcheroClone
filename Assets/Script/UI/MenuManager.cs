@@ -11,6 +11,10 @@ namespace TestTask.UI
             SceneManager.LoadScene(scene);
         }
 
+        public void LoadLevelByName(string sceneName){
+            SceneManager.LoadScene(sceneName);
+        }
+
         public void Quit(){
             Application.Quit();
         }

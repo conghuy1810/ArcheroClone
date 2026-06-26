@@ -11,20 +11,26 @@ namespace TestTask.Fight
         [SerializeField] float time;
         private void Start()
         {
-            rb.velocity = transform.forward * force;
+            rb.linearVelocity = transform.forward * force;
         }
 
-        public new void OnTriggerEnter(Collider other) {
-                base.OnTriggerEnter(other);
+        public override void OnTriggerEnter(Collider other) {
+            if (ShouldHandleCollision(other, out Attributes attr))
+            {
+                ResetRigidBody();
+                if (attr != null)
+                {
+                    OnCollision(attr);
+                }
                 Destroy(gameObject, time);
-            
+            }
         }
         ///<summary>
         ///Reset the rigidbody velocity to zero.
         ///</summary>
         public override void ResetRigidBody()
         {       
-                rb.velocity = Vector3.zero;
+                rb.linearVelocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
         }
 

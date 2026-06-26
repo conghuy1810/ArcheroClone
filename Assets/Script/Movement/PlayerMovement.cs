@@ -8,6 +8,11 @@ namespace TestTask.Movement
     public class PlayerMovement : Movement
     {
         [SerializeField] PlayerInformation playerInformation;
+
+        [Header("Vampire Survivors Settings")]
+        [SerializeField] private bool autoDetectVampireMode = true;
+        [SerializeField] private bool autoAttackWhileMoving = false;
+
         bool setAttack = false;
         float speed;
         private new void Awake() {
@@ -21,13 +26,31 @@ namespace TestTask.Movement
         private void Update()
         {
             if(GameHandler.instance.isPause) return;
-            if (Input.anyKey)
-                Move();
-            else if (!setAttack)
+
+            bool isVampireMode = autoDetectVampireMode ? UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "VampireSurvivors" : autoAttackWhileMoving;
+
+            if (isVampireMode)
             {
-                setAttack = true;
-                if (GameHandler.instance.EnemyExits())
+                if (Input.anyKey)
+                {
+                    Move();
+                }
+
+                if (!attack.IsAttacking && GameHandler.instance.EnemyExits())
+                {
                     attack.SetCanAttack(enemy);
+                }
+            }
+            else
+            {
+                if (Input.anyKey)
+                    Move();
+                else if (!setAttack)
+                {
+                    setAttack = true;
+                    if (GameHandler.instance.EnemyExits())
+                        attack.SetCanAttack(enemy);
+                }
             }
         }
         ///<summary>
@@ -44,7 +67,13 @@ namespace TestTask.Movement
             }
             setAttack = false;
             CollisionCheck();
-            behaviour.ChangeBehaviour(this);
+
+            bool isVampireMode = autoDetectVampireMode ? UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "VampireSurvivors" : autoAttackWhileMoving;
+            if (!isVampireMode)
+            {
+                behaviour.ChangeBehaviour(this);
+            }
+
             float perFrameTime = Time.deltaTime;
             Vector3 moveDirection = new Vector3(horizontal, 0, vertical);
             //Move player by speed value every franme

@@ -7,6 +7,12 @@ namespace TestTask.Movement
     {
         [Header("Game object to hit toward player")]
         [SerializeField] GameObject arrow;
+
+        protected override bool StopMovingInAttackRange()
+        {
+            return true; // Quái đứng yên sẽ dừng di chuyển khi đã vào tầm bắn
+        }
+
         public override void EnemyAttack()
         {
             StartCoroutine(ThrowWeapons(transform.rotation,30));          

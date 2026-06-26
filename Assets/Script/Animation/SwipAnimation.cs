@@ -20,7 +20,7 @@ public class SwipAnimation : MonoBehaviour
         if (tempTime > 0)
             {
                 tempTime -=Time.deltaTime;
-              //  splashImage.fillAmount = tempTime/totalTime;
+               splashImage.fillAmount = tempTime/totalTime;
             }else{
                 gameObject.SetActive(false);
             }

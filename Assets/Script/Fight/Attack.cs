@@ -31,10 +31,16 @@ namespace TestTask.Fight
 
         [Header("Add Handle physical property scriptable object")]
         [SerializeField] HandlePhysicalProperty handlePhysicalProperty;
+
+        [Header("Vampire Survivors Settings")]
+        [SerializeField] private bool autoDetectVampireMode = true;
+        [SerializeField] private bool autoAttackWhileMoving = false;
+
         PlayerSkill playerSkill;
         PlayerBehaviour playerBehaviour;
         float tempTime;
         bool canAttack = false;
+        public bool IsAttacking => canAttack;
         GameObject weapon;
         Attack attack;
         public new void Awake()
@@ -114,7 +120,13 @@ namespace TestTask.Fight
                 return;
             }
             Vector3 position = enemy.position;
-            transform.DOLookAt(position, 0.2f);
+            
+            bool isVampireMode = autoDetectVampireMode ? UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "VampireSurvivors" : autoAttackWhileMoving;
+            
+            if (!isVampireMode)
+            {
+                transform.DOLookAt(position, 0.2f);
+            }
         }
 
         ///<summary>
