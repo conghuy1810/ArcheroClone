@@ -1,0 +1,12 @@
+{
+    "asset": "998226a5a62014238b06825fa4236e8d",
+    "fileName": "019f083f-663f-705d-9ece-a1b4fa26c208.pose.json",
+    "prompt": "A small bipedal dragon standing in a proud idle pose, breathing slightly, tail swaying gently.",
+    "negativePrompt": "",
+    "model": "unity-text-to-motion",
+    "modelName": "Text to Motion",
+    "customSeed": 810521229,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "isTrimmed": false
+}

@@ -1,0 +1,12 @@
+{
+    "asset": "70375bdbe428f415db255bfb9a7c12b6",
+    "fileName": "019f083f-67ee-7a77-8da6-e23b17264b82.pose.json",
+    "prompt": "A dragon flying/gliding in mid-air, flapping wings steadily to stay in place, loopable, in-place.",
+    "negativePrompt": "",
+    "model": "unity-text-to-motion",
+    "modelName": "Text to Motion",
+    "customSeed": 1098118585,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "isTrimmed": false
+}

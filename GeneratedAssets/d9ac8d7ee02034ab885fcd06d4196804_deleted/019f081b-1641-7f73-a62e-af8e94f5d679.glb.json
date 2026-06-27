@@ -1,0 +1,23 @@
+{
+  "asset": "d9ac8d7ee02034ab885fcd06d4196804",
+  "fileName": "019f081b-1641-7f73-a62e-af8e94f5d679.glb",
+  "prompt": "",
+  "negativePrompt": "",
+  "model": "model3d-tripo-p1",
+  "modelName": "Tripo P1",
+  "customSeed": -1,
+  "w3CTraceId": "",
+  "feedback": 1,
+  "refinementMode": "Generation",
+  "promptImageReferenceGuid": "55a146fa70d7742ecae93784484cb168",
+  "modelReferenceGuid": "",
+  "multiviewFrontGuid": "",
+  "multiviewBackGuid": "",
+  "multiviewLeftGuid": "",
+  "multiviewRightGuid": "",
+  "multiviewTopGuid": "",
+  "multiviewBottomGuid": "",
+  "multiviewLeftFrontGuid": "",
+  "multiviewRightFrontGuid": "",
+  "faceLimit": -1
+}

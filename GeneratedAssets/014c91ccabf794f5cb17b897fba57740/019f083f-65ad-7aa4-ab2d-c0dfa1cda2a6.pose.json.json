@@ -1,0 +1,12 @@
+{
+    "asset": "014c91ccabf794f5cb17b897fba57740",
+    "fileName": "019f083f-65ad-7aa4-ab2d-c0dfa1cda2a6.pose.json",
+    "prompt": "A dragon running forward bipedally, arms forward, wings flapping slightly for balance, loopable, in-place.",
+    "negativePrompt": "",
+    "model": "unity-text-to-motion",
+    "modelName": "Text to Motion",
+    "customSeed": 276870230,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "isTrimmed": false
+}

@@ -1,0 +1,12 @@
+{
+    "asset": "54912e8a2ecc14a328fbc62ac4a3f22a",
+    "fileName": "019f083f-65db-715c-9fcb-0638c470641d.pose.json",
+    "prompt": "A dragon walking forward bipedally with heavy steps, tail swinging left and right, loopable, in-place.",
+    "negativePrompt": "",
+    "model": "unity-text-to-motion",
+    "modelName": "Text to Motion",
+    "customSeed": 333404918,
+    "w3CTraceId": "",
+    "feedback": 0,
+    "isTrimmed": false
+}
